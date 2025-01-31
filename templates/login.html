@@ -1,7 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../static/styles/auth.css"/>
+    <!-- Google Tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VXBM31L5SJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-VXBM31L5SJ");
+    </script>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Swahili Spam Detection - AI-powered Spam Filtering System | Ingia
+    </title>
+    <meta
+      name="description"
+      content="An AI-powered Swahili spam detection system that filters spam messages effectively using machine learning and NLP. Enhance your digital communication security today."
+    />
+    <meta
+      name="keywords"
+      content="Swahili spam detection, AI spam filter, machine learning, NLP, anti-spam software, spam filtering system"
+    />
+    <meta name="author" content="Patric" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Swahili, English" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Swahili Spam Detection System - AI-powered Spam Filtering System"
+    />
+    <meta
+      property="og:description"
+      content="An AI-powered Swahili spam detection system that filters spam messages effectively using machine learning and NLP."
+    />
+    <meta
+      property="og:image"
+      content="https://ssd.cpage.co.tz/static/assets/default-avatar.png"
+    />
+    <meta property="og:url" content="https://ssd.cpage.co.tz/" />
+    <meta property="og:site_name" content="Swahili Spam Detection System" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Swahili Spam Detection System - AI-powered Spam Filtering"
+    />
+    <meta
+      name="twitter:description"
+      content="An AI-powered Swahili spam detection system that filters spam messages effectively using machine learning and NLP."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ssd.cpage.co.tz/static/assets/default-avatar.png"
+    />
+    <meta name="twitter:site" content="@patric_forreal" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ssd.cpage.co.tz/static/assets/default-avatar.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ssd.cpage.co.tz/" />
+
+    <link rel="stylesheet" href="../static/styles/auth.css" />
     <link rel="shortcut icon" href="../static/assets/private_wim.png" />
     <link rel="stylesheet" href="../static/sweetalert/sweetalert.css" />
     <meta charset="UTF-8" />
@@ -33,7 +108,13 @@
               autocomplete="off"
               required
             />
-            <button class="auth-button" id="handleLogInBtn" onclick="handleLogin()">Ingia</button>
+            <button
+              class="auth-button"
+              id="handleLogInBtn"
+              onclick="handleLogin()"
+            >
+              Ingia
+            </button>
             <p class="auth-switch">
               Hauna akaunti?
               <a href="#" onclick="toggleForms()">Jiunge</a>

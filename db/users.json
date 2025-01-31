@@ -1,1 +1,1 @@
-{}
+{"patrick": {"name": "Patrick", "password": "scrypt:32768:8:1$etxLo2ZyIeEexG19$57847cd54612d89890279b84d5a2ad009b98de847ebccafd954b6fe55e9ad9aa2d241144b062a6b393a483cf3401d4fe8d01318e8bdda1a3368a10f4d85033e9", "messages": [{"message": "Hello", "date": "2025-01-31T14:16:54.146774", "new_number": true, "output": "SIO UTAPELI", "id": "03c61f88-716e-44f0-9f3f-015af016a2aa"}]}}
