@@ -2,6 +2,8 @@
 
 A Flask-based web application for detecting spam messages in Swahili communications using machine learning. Maintains clean communication channels with real-time analysis and user feedback capabilities.
 
+![UI interface of ssd](static/assets/app_assets/ssp-screenshot.png)
+
 ## Features
 
 - Real-time Swahili message spam detection
