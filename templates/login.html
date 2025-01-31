@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/styles/auth.css"/>
+    <link rel="shortcut icon" href="../static/assets/private_wim.png" />
+    <link rel="stylesheet" href="../static/sweetalert/sweetalert.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swahili Spam Detection - Ingia</title>
+  </head>
+  <body style="justify-content: center; align-items: center">
+    <div class="auth-container">
+      <div class="auth-box">
+        <div class="auth-header">
+          <h2>Swahili Spam Detection</h2>
+          <p class="auth-subtitle">Ingia kuendelea</p>
+        </div>
+        <div class="auth-form">
+          <div id="loginForm" class="active-form">
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Jina tumizi"
+              class="auth-input"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Nenosiri"
+              class="auth-input"
+              autocomplete="off"
+              required
+            />
+            <button class="auth-button" id="handleLogInBtn" onclick="handleLogin()">Ingia</button>
+            <p class="auth-switch">
+              Hauna akaunti?
+              <a href="#" onclick="toggleForms()">Jiunge</a>
+            </p>
+          </div>
+          <div id="registerForm" class="hidden-form">
+            <input
+              type="text"
+              id="registerName"
+              placeholder="Jina kamili"
+              class="auth-input"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="text"
+              id="registerUsername"
+              placeholder="Jina tumizi"
+              class="auth-input"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Nenosiri"
+              class="auth-input"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Rudia Nenosiri"
+              class="auth-input"
+              autocomplete="off"
+              required
+            />
+            <button class="auth-button" onclick="handleRegister()">
+              Sajili
+            </button>
+            <p class="auth-switch">
+              Tayari una akaunti?
+              <a href="#" onclick="toggleForms()">Ingia</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/auth.js"></script>
+    <script src="../static/sweetalert/sweetalert.js"></script>
+  </body>
+</html>

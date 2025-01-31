@@ -1,0 +1,246 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/styles/styles.css" />
+    <link rel="shortcut icon" href="../static/assets/private_wim.png" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="../static/sweetalert/sweetalert.css" />
+    <title>Swahili Spam Detection</title>
+  </head>
+  <body>
+    <!-- Add hamburger button -->
+    <button class="hamburger-btn" onclick="toggleSidebar()">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M3 12h18M3 6h18M3 18h18" />
+      </svg>
+    </button>
+
+    <!-- Add sidebar overlay -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">Swahili Spam Detection</div>
+        <button class="close-sidebar" onclick="toggleSidebar()">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="sidebar-container">
+        <a href="/" class="new-chat-link"
+          ><button class="new-chat">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 12h16m-8-8v16" />
+            </svg>
+            Chambuzi Mpya
+          </button></a
+        >
+
+        <div class="section">
+          <div class="section-header">
+            <h3 class="section-title">Chambuzi Za Karibuni</h3>
+            <button
+              class="icon-button"
+              onclick="clearHistory()"
+              title="Clear history"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="validation-history" class="validation-list">
+            <!-- History items will be inserted here -->
+            <div class="history-loader">
+              <div class="history-loader-bar"></div>
+              <div class="history-loader-bar"></div>
+              <div class="history-loader-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile" onclick="toggleDropdown()">
+          <div class="get-app">
+            <img
+              src="../static/assets/default-avatar.png"
+              alt="Profile"
+              class="avatar-profile"
+            />
+            <span>Akaunti Yangu</span>
+          </div>
+          <div class="dropdown" id="dropdown" style="display: none">
+            <div class="dropdown-header" id="user-name-header"></div>
+            <div class="dropdown-item" onclick="showContributors()">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75" />
+              </svg>
+              Ona Wahusika
+            </div>
+            <div class="dropdown-item danger" onclick="clearHistory()">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+              </svg>
+              Futa Historia
+            </div>
+            <div class="dropdown-item danger" onclick="handleLogout()">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14 4-4-4-4m-4 4h8"
+                />
+              </svg>
+              Toka
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add error container -->
+    <div id="error-container" class="error-message" style="display: none"></div>
+
+    <div class="main" id="main_container">
+      <div class="chat-container" id="chat-container">
+        <!-- System Welcome Message -->
+        <br /><br />
+        <div class="message system">
+          <div class="avatar">SSD</div>
+          <div>
+            <h2>Habari, Karibu Swahili Spam Detection</h2>
+            <p>
+              Weka ujumbe unaoshukiwa kuwa wakitapeli hapo chini, mfumo wetu
+              utakusaidia kuchambua:
+            </p>
+            <div class="disclaimer">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4m0-4h.01" />
+              </svg>
+              <span
+                >Mfumo huu unatumia Akili Mnemba kuchambua ujumbe. Jumbe zote
+                zitahifadhiwa kwa lengo la kuboresha mfumo.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Messages will be inserted here -->
+        <div id="chat-messages"></div>
+      </div>
+
+      <div class="input-container">
+        <!-- Move toggle container here -->
+        <div class="toggle-container">
+          <label class="toggle-label">Namba Mpya?</label>
+          <br />
+          <label class="toggle-switch">
+            <input type="checkbox" id="newNumberToggle" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <textarea
+          class="input"
+          placeholder="Weka ujumbe hapa..."
+          rows="1"
+        ></textarea>
+        <div class="actions">
+          <button class="action-btn" id="submitBtn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading Overlay -->
+      <div id="loader" class="loader-overlay">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <!-- Contributors Modal -->
+    <div id="contributors-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Wahusika Wa Mfumo Huu</h3>
+        <div class="contributors-list">
+          <!-- Contributors will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/js/main.js"></script>
+    <script src="../static/sweetalert/sweetalert.js"></script>
+  </body>
+</html>

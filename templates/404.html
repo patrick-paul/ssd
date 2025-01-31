@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found</title>
+    <style>
+        /* Mobile-first approach */
+        :root {
+            --primary-color: #4466ff;
+            --background-dark: #1a1a1a;
+            --surface-dark: #2a2a2a;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --border-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--background-dark);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: var(--text-primary);
+        }
+
+        /* Main Container */
+        .auth-container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Auth Box */
+        .auth-box {
+            width: 100%;
+            max-width: 400px;
+            background: var(--surface-dark);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .auth-header h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .auth-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .auth-container {
+                padding: 40px;
+            }
+
+            .auth-box {
+                padding: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 16px;
+                align-items: flex-start;
+                padding-top: 10vh;
+            }
+
+            .auth-box {
+                padding: 1.5rem;
+                background: var(--surface-dark);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .auth-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .auth-container {
+                padding: 12px;
+            }
+
+            .auth-box {
+                padding: 1rem;
+            }
+
+            .auth-header h2 {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <h2>Oops! <br>Kusara haija patikana</h2>
+                <p class="auth-subtitle">Tume shidwa kupata kurasa unayo itafuta.</p>
+            </div>
+            <div class="auth-body" style="align-items: center; justify-content: center;">
+                <a href="/" class="auth-button" style="color: #4466ff; text-align: center; justify-content: center;">Rudi nyumbani</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

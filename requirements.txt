@@ -1,0 +1,7 @@
+Flask
+flask-limiter
+werkzeug
+flask-cors
+joblib
+bleach
+scikit-learn

@@ -1,0 +1,42 @@
+```
+└── 📁ssd
+    └── 📁__pycache__
+        └── app.cpython-313.pyc
+    └── 📁.venv
+    └── 📁db
+        └── feedback.json
+        └── users.json
+    └── 📁logs
+        └── app_error-4.log
+        └── app_out-4.log
+        └── app-4.log
+    └── 📁model
+        └── 📁newlyTrainedModel_27_jan_25
+            └── swahiliSpamDetectionModel_v2.pkl
+        └── swahiliSpamDetectionModel.pkl
+    └── 📁static
+        └── 📁assets
+            └── Architecture-of-JDBC2.jpg
+            └── default-avatar.png
+            └── private_wim.png
+        └── 📁js
+            └── auth.js
+            └── main.js
+        └── 📁styles
+            └── auth.css
+            └── styles.css
+        └── 📁sweetalert
+            └── sweetalert.css
+            └── sweetalert.js
+    └── 📁templates
+        └── 404.html
+        └── index.html
+        └── login.html
+    └── app.py
+    └── app.log
+    └── ecosystem.config.js
+    └── Pipfile
+    └── Pipfile.lock
+    └── requirements.txt
+    └── wsgi.py
+```
