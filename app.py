@@ -132,6 +132,14 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt')
+
 @app.route('/login')
 def login_page():
     if 'username' in session:
