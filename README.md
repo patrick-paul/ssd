@@ -1,4 +1,4 @@
-# Karibu Swahili Spam Detection
+# Swahili Spam Detection
 
 A Flask-based web application for detecting spam messages in Swahili communications using machine learning. Maintains clean communication channels with real-time analysis and user feedback capabilities.
 
