@@ -211,8 +211,6 @@ def logout():
 @app.route('/')
 @login_required
 def index():
-    print("Session data:", session)  # Add this to see what session data exists
-    print("Cookies:", request.cookies)
     return send_from_directory('templates', 'index.html')
 
 @app.route('/clear-history', methods=['POST'])
